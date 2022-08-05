@@ -3,20 +3,20 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+        rectangulo rec1 = new rectangulo(2,3,"vermelho",1);
+        rectangulo rec2 = new rectangulo(4,5,"azul",2);
+        rectangulo rec3 = new rectangulo(4,6,"verde",3);
+        rectangulo rec4 = new rectangulo(7,5,"amarelo",4);
 
-        rectangulo rec1 = new rectangulo(2,3,"vermelho");
-        rectangulo rec2 = new rectangulo(4,5,"azul");
-        rectangulo rec3 = new rectangulo(4,6,"verde");
-        rectangulo rec4 = new rectangulo(7,5,"amarelo");
+        ArrayList<rectangulo> propriedadesArrayList = new ArrayList<>();
 
-        ArrayList<rectangulo> rectanguloArrayList = new ArrayList<>();
+        propriedadesArrayList.add(rec1);
+        propriedadesArrayList.add(rec2);
+        propriedadesArrayList.add(rec3);
+        propriedadesArrayList.add(rec4);
 
-        rectanguloArrayList.add(rec1);
-        rectanguloArrayList.add(rec2);
-        rectanguloArrayList.add(rec3);
-        rectanguloArrayList.add(rec4);
+        System.out.println(propriedadesArrayList);
 
-        System.out.println(rectanguloArrayList);
 
 
     }
