@@ -5,34 +5,22 @@ public class rectangulo {
     int altura;
     String cor;
 
-    public rectangulo(int largura, int altura, String cor, int index) {
-        this.largura = largura;
-        this.altura = altura;
-        this.cor = cor;
+    public rectangulo (int largura, int altura, String cor, int index) {
+        if (largura < 0) {this.largura=Math.abs(largura);}
+        if (altura < 0) {this.altura=Math.abs(altura);}
+        if (cor.equalsIgnoreCase("amarelo") || cor.equalsIgnoreCase("vermelho") || cor.equalsIgnoreCase("verde") || cor.equalsIgnoreCase("azul")) {
+            this.cor=cor;}
+        else{ System.out.println("cor incorrecta");
+        }
         this.index = index;
     }
-
-    /*public void medidas (int largura, int altura) {
-
-        if (largura < 0 || altura < 0) {
-            System.out.println("largura ou altura menor que zero");
-
-        }
-    }*/
-
-    /*public void cores (String cor) {
-        if (cor.equals("amarelo") || cor.equals("vermelho") || cor.equals("verde") || cor.equals("azul")) {
-            System.out.println("cor certa");
-        }
-
-    }*/
 
     public double area() {
         return this.largura*this.altura;
     }
 
     public double perimetro() {
-        return 2*this.largura+2*this.altura;
+        return 2*(this.largura+this.altura);
     }
 
 
@@ -41,10 +29,6 @@ public class rectangulo {
             return "\nRectangulo " + index + "\nLargura:" + largura + " Altura:" + altura + "\nArea:" + area() + " Perimetro:" + perimetro() + "\nCor:" + this.cor + "\n_____________________________";
 
         }
-
-
-
-
 
 }
 
